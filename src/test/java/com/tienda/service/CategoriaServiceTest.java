@@ -23,6 +23,16 @@ public class CategoriaServiceTest {
         categoriaService.agregarCategoria(new Categoria("Juguetes", "Juguetes para niños"));
         assertEquals(2, categoriaService.listarCategorias().size());
     }
+    @Test
+    public void testAgregarCategoria1() {
+        categoriaService.agregarCategoria(new Categoria("Juguetes", "Juguetes para Adultos"));
+        assertEquals(2, categoriaService.listarCategorias().size());
+    }
+    @Test
+    public void testAgregarCategoria2() {
+        categoriaService.agregarCategoria(new Categoria("Juguetes", "Maqeuillaje para mujeres"));
+        assertEquals(2, categoriaService.listarCategorias().size());
+    }
 
     @Test
     public void testBuscarPorNombreExistente() {
