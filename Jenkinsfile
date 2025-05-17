@@ -2,10 +2,18 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven' // Asegúrate de que este nombre esté definido en "Global Tool Configuration"
+        maven 'Maven'
     }
 
     stages {
+        stage('Git operations') {
+            steps {
+                bat 'git branch'
+                bat 'git checkout main'
+                bat 'git merge origin/RamaPrueba'
+            }
+        }
+
         stage('Build') {
             steps {
                 bat 'mvn clean package -DskipTests'
