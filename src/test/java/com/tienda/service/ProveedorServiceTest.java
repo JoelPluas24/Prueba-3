@@ -32,4 +32,9 @@ public class ProveedorServiceTest {
     public void testBuscarPorNombreInexistente() {
         assertNull(proveedorService.buscarPorNombre("NoExiste"));
     }
+    
+     @Test
+    public void testBuscarPorCedulaiexistente() {
+        assertNull(proveedorService.buscarPorNombre("Cedula No Existe"));
+    }
 }
