@@ -2,27 +2,10 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'
+        maven 'Maven' // Asegúrate de que este nombre esté definido en "Global Tool Configuration"
     }
 
     stages {
-        stage('Git operations') {
-            steps {
-                bat 'git config user.email "jenkins@example.com"'
-                bat 'git config user.name "Jenkins CI"'
-
-                bat 'git checkout main'
-                bat 'git pull origin main' // ← actualiza main con lo remoto
-                bat 'git merge origin/RamaPrueba' // ← fusiona la rama de prueba
-
-                // Opción segura: hacer push normal (fallará si hay cambios remotos nuevos)
-                bat 'git push origin main'
-
-                // ⚠️ Opción alternativa si sabes que puedes sobrescribir: usar --force
-                // bat 'git push origin main --force'
-            }
-        }
-
         stage('Build') {
             steps {
                 bat 'mvn clean package -DskipTests'
