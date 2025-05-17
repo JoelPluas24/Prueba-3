@@ -35,4 +35,9 @@ public class FacturaServiceTest {
     public void testBuscarPorIdInexistente() {
         assertNull(facturaService.buscarPorId(999));
     }
+    
+    @Test
+    public void BuscarporanioAC() {
+        assertNull(facturaService.buscarPorId(999));
+    }
 }
