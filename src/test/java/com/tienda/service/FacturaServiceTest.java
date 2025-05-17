@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import static org.junit.Assert.*;
 
 public class FacturaServiceTest {
-
+    //Nuevo textooooooos
     private FacturaService facturaService;
 
     @Before
@@ -30,9 +30,20 @@ public class FacturaServiceTest {
         assertNotNull(factura);
         assertEquals(1, factura.getId());
     }
+    @Test
+    public void testBuscarPorIdExistente2() {
+        Factura factura = facturaService.buscarPorId(1);
+        assertNotNull(factura);
+        assertEquals(1, factura.getId());
+    }
 
     @Test
     public void testBuscarPorIdInexistente() {
+        assertNull(facturaService.buscarPorId(999));
+    }
+    
+    @Test
+    public void BuscarporanioAC() {
         assertNull(facturaService.buscarPorId(999));
     }
 }

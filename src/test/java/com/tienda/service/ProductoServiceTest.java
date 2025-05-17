@@ -7,7 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ProductoServiceTest {
-
+ 
+    //HOLA ESTO ES ALGO DE PRUEBA PARA LA AUTOMATIZACIÓN DE JENKINS
+    //NUEVA PRUEBAAAAAAA
     private ProductoService productoService;
 
     @Before
