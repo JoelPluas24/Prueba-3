@@ -23,6 +23,13 @@ public class ClienteServiceTest {
         clienteService.agregarCliente(new Cliente("Luis", "luis@gmail.com"));
         assertEquals(2, clienteService.listarClientes().size());
     }
+    
+    //Nuevo test
+    @Test
+    public void testAgregarCliente2() {
+        clienteService.agregarCliente(new Cliente("Luis", "Joel@gmail.com"));
+        assertEquals(2, clienteService.listarClientes().size());
+    }
 
     @Test
     public void testBuscarPorCorreoExistente() {
